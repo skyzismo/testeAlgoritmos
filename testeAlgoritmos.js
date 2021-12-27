@@ -63,7 +63,7 @@ const converteEmObjeto = entrada => {
     return objeto;
 };
 
-console.log(converteEmObjeto([['c', 2], ['d', 4]]));
+converteEmObjeto([['c', 2], ['d', 4]]);
 
 // q5
 
@@ -123,6 +123,19 @@ const comparaArrays = (entrada1, entrada2) => {
 };
 
 comparaArrays([1,2,3,4], [1,2,3,4]);
+
+// q9
+
+const divideArray = (entrada, parametro) => {
+    let array = [];
+
+    for (let i = 0; i < parametro; i++) {
+        array.push(entrada[i]);
+    }
+    return array;
+};
+
+console.log(divideArray([1, 2, 3, 4, 5], 2));
 
 // q10
 
