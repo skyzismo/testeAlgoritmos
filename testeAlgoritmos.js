@@ -1,3 +1,16 @@
+// q1
+
+const criaArrayValores = (tamanho, parametro) => {
+    let array = [];
+
+    for (let i = 0; i < tamanho; i++) {
+        array.push(parametro);
+    }
+    return array;
+};
+
+criaArrayValores(3, 'a');
+
 // q2
 
 const inverteArray = entrada => {
@@ -26,6 +39,31 @@ const limpaArray = entrada => {
 };
 
 limpaArray([1, 2, "", undefined]);
+
+// q4
+
+const converteEmObjeto = entrada => {
+    let objeto = {};
+
+    for (let i = 0; i < entrada.length; i++) {
+        for (let j = 0; j < entrada.length; j++) {
+            objeto[i] = entrada[i][j];
+        }
+    }
+
+    // let parametros = objeto;
+    //
+    // Object.keys(parametros).forEach(chave => {
+    //     let novaChave = parametros[chave];
+    //     objeto[novaChave] = objeto[chave];
+    //     delete objeto[chave];
+    // });
+
+
+    return objeto;
+};
+
+console.log(converteEmObjeto([['c', 2], ['d', 4]]));
 
 // q5
 
