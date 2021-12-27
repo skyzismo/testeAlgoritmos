@@ -14,9 +14,9 @@
 -[ ] 4) Implemente um método que a partir de um array de arrays, converta em um objeto com chave e valor.
    Entrada do método ([["c",2],["d",4]]), Resultado do métdodo: {c:2, d:4}
 
--[ ] 5) Implemente um método que retorne um array, sem os itens passados por parâmetro depois do array de entrada. Entrada do método ([5,4,3,2,5], 5,3), Resultado do método: [4,2]
+-[x] 5) Implemente um método que retorne um array, sem os itens passados por parâmetro depois do array de entrada. Entrada do método ([5,4,3,2,5], 5,3), Resultado do método: [4,2]
 
--[ ] 6) Implemente um método que retorne um array, sem valores duplicados.
+-[x] 6) Implemente um método que retorne um array, sem valores duplicados.
    Entrada do método ([1,2,3,3,2,4,5,4,7,3]), Resultado do método: [1,2,3,4,5,7]
 
 -[x] 7) Implemente um método que compare a igualdade de dois arrays e retorne um valor booleano.

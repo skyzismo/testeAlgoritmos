@@ -33,29 +33,34 @@ const removeIgualParametro = (entrada, parametro1, parametro2) => {
     let novoArray = [];
 
     for (let i = 0; i < entrada.length; i++) {
-        if (entrada[i] != parametro1 && parametro2){
+        if (entrada[i] !== parametro1 && parametro2){
             novoArray.push(entrada[i]);
         }
     }
     return novoArray;
 };
 
-console.log(removeIgualParametro([5,4,3,2,5], 5, 3));
+removeIgualParametro([5,4,3,2,5], 5, 3);
 
 // q6 - TERMINAR, TÁ ERRADA
 
 const removeDuplicado = entrada => {
-    let novoArray = [];
 
     for (let i = 0; i < entrada.length; i++) {
+        let comparador = entrada[i];
+        let contador = 0;
         for (let j = entrada.length; j > 0; j--) {
-            if (entrada[i] !== entrada[j]) {
-                novoArray.push(entrada[i]);
+            if (comparador === entrada[j]) {
+                contador++;
+                if (contador > 1) {
+                    contador--;
+                    entrada.splice(entrada.indexOf(entrada[j]), 1);
+                }
             }
         }
     }
 
-    return novoArray;
+    return entrada;
 }
 
 removeDuplicado([1,2,3,3,2,4,5,4,7,3]);
@@ -67,7 +72,7 @@ const comparaArrays = (entrada1, entrada2) => {
 
     for (let i = 0; i < entrada1.length; i++) {
         for (let j = 0; j < entrada2.length; j++) {
-            if (entrada1[i] == entrada2[j]){
+            if (entrada1[i] === entrada2[j]){
                 cont++;
             }
         }
@@ -88,7 +93,7 @@ const valorComum = (entrada1, entrada2) => {
 
     for (let i = 0; i < entrada1.length; i++) {
         for (let j = 0; j < entrada2.length; j++) {
-            if (entrada1[i] == entrada2[j]){
+            if (entrada1[i] === entrada2[j]){
                 novoArray.push(entrada1[i]);
             }
         }
