@@ -124,18 +124,40 @@ const comparaArrays = (entrada1, entrada2) => {
 
 comparaArrays([1,2,3,4], [1,2,3,4]);
 
-// q9
+// q8
 
-const divideArray = (entrada, parametro) => {
-    let array = [];
+const removeAninhamento = entrada => {
+    let novoArray = [];
+    // let aux = 0;
 
-    for (let i = 0; i < parametro; i++) {
-        array.push(entrada[i]);
+    for (let i = 0; i < entrada.length; i++) {
+
+        for (let aux = 0; aux < entrada.length; aux++) {
+            if (entrada[i][aux]) {
+                novoArray.push(entrada[i][aux]);
+            }
+        }
+
+
     }
-    return array;
+
+    return novoArray;
 };
 
-console.log(divideArray([1, 2, 3, 4, 5], 2));
+console.log(removeAninhamento([1, 2, [3], [4, 5]]));
+
+// q9
+
+// const divideArray = (entrada, parametro) => {
+//     let array = [];
+//
+//     for (let i = 0; i < parametro; i++) {
+//         array.push(entrada[i]);
+//     }
+//     return array;
+// };
+//
+// console.log(divideArray([1, 2, 3, 4, 5], 2));
 
 // q10
 
